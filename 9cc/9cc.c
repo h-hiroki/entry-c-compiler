@@ -68,7 +68,7 @@ bool at_eof() {
 
 // 新しいトークンを作成してcurに繋げる
 Token *new_token(TokenKind kind, Token *cur, char *str) {
-    Token *tok = calloc(1, sizeof(Token));
+    Token *tok = calloc(1, sizeof(Token)); // メモリ領域を確保する
     tok->kind = kind;
     tok->str = str;
     cur->next = tok;
